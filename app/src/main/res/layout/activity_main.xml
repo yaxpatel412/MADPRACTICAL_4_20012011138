@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            android:layout_height="?attr/actionBarSize"
+            app:title="MAD Intent Practical"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="180dp"/>
+            <Button
+                android:id="@+id/button_browse"
+                app:layout_constraintStart_toEndOf="@id/textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/purple_200"
+                android:text="Browse"
+                android:textColor="@color/purple_500"
+                app:layout_constraintTop_toBottomOf="@id/textview"
+                android:clickable="true"/>
+            <Button
+                android:id="@+id/button_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call"
+                android:textColor="@color/purple_500"
+                android:backgroundTint="@color/purple_200"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toEndOf="@id/textview"
+                app:layout_constraintTop_toBottomOf="@id/button_browse"/>
+
+            <Button
+                android:id="@+id/button_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Content"
+                android:textColor="@color/purple_500"
+                android:backgroundTint="@color/purple_200"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toEndOf="@id/textview"
+                app:layout_constraintTop_toBottomOf="@id/button_call" />
+
+            <Button
+                android:id="@+id/button_calllog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call Log"
+                android:textColor="@color/purple_500"
+                android:backgroundTint="@color/purple_200"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toEndOf="@id/textview"
+                app:layout_constraintTop_toBottomOf="@id/button_contact" />
+
+            <Button
+                android:id="@+id/button_gallary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gallary"
+                android:textColor="@color/purple_500"
+                android:backgroundTint="@color/purple_200"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toEndOf="@id/textview"
+                app:layout_constraintTop_toBottomOf="@id/button_calllog"/>
+
+            <Button
+                android:id="@+id/button_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camera"
+                android:textColor="@color/purple_500"
+                android:backgroundTint="@color/purple_200"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toEndOf="@id/textview"
+                app:layout_constraintTop_toBottomOf="@id/button_gallary"/>
+
+            <Button
+                android:id="@+id/button_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alarm"
+                android:textColor="@color/purple_500"
+                android:backgroundTint="@color/purple_200"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toEndOf="@id/textview"
+                app:layout_constraintTop_toBottomOf="@id/button_camera" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField_call"
+                android:layout_width="0dp"
+                android:textColorHint="@color/purple_200"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/white"
+
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintEnd_toStartOf="@id/button_call"
+                app:layout_constraintBottom_toBottomOf="@id/button_call"
+                app:layout_constraintStart_toStartOf="parent"
+                app:startIconDrawable="@drawable/ic_baseline_phone_24"
+                android:hint="Call">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHighlight="@color/teal_200"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField_browse"
+                android:layout_width="0dp"
+                android:textColorHint="@color/purple_200"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/white"
+
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintEnd_toStartOf="@id/button_browse"
+                app:layout_constraintBottom_toBottomOf="@id/button_browse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:startIconDrawable="@drawable/ic_baseline_my_location_24"
+                android:hint="Web Url">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField_content"
+                android:layout_width="0dp"
+                android:textColorHint="@color/purple_200"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/white"
+
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintEnd_toStartOf="@id/button_contact"
+                app:layout_constraintBottom_toBottomOf="@id/button_contact"
+                app:layout_constraintStart_toStartOf="parent"
+                app:startIconDrawable="@drawable/ic_baseline_folder_24"
+                android:hint="Contact">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField_calllog"
+                android:layout_width="0dp"
+                android:textColorHint="@color/purple_200"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/white"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintEnd_toStartOf="@id/button_calllog"
+                app:layout_constraintBottom_toBottomOf="@id/button_calllog"
+                app:layout_constraintStart_toStartOf="parent"
+                app:startIconDrawable="@drawable/ic_baseline_contact_phone_24"
+                android:hint="Call Log">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField_gallary"
+                android:layout_width="0dp"
+                android:textColorHint="@color/purple_200"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/white"
+                app:endIconTint="@color/purple_700"
+
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintEnd_toStartOf="@id/button_gallary"
+                app:layout_constraintBottom_toBottomOf="@id/button_gallary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:startIconDrawable="@drawable/ic_baseline_insert_photo_24"
+                android:hint="Gallry">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField_camera"
+                android:layout_width="0dp"
+                android:textColorHint="@color/purple_200"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/white"
+
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintEnd_toStartOf="@id/button_camera"
+                app:layout_constraintBottom_toBottomOf="@id/button_camera"
+                app:layout_constraintStart_toStartOf="parent"
+                app:startIconDrawable="@drawable/ic_baseline_camera_alt_24"
+                android:hint="Camera">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField_alarm"
+                android:layout_width="0dp"
+                android:textColorHint="@color/purple_200"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/white"
+
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintEnd_toStartOf="@id/button_alarm"
+                app:layout_constraintBottom_toBottomOf="@id/button_alarm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:startIconDrawable="@drawable/ic_baseline_access_alarm_24"
+                android:hint="Alarm">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
